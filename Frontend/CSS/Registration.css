@@ -1,0 +1,142 @@
+﻿body {
+    font-family: Arial, sans-serif;
+    background-color: #e0f7fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.registration-form {
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 550px;
+
+}
+
+.form-field {
+    margin-bottom: 15px;
+    margin-left: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"], input[type="tel"], input[type="email"], input[type="date"], input[type="password"], select {
+    width: 90%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    display: none;
+}
+
+.front {
+    display: flex;
+    gap: 40px;
+}
+
+.gender-container {
+    display: flex;
+    gap: 20px;
+}
+
+input[type="radio"] {
+    margin-right: 5px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #00796b;
+    color: white;
+    cursor: pointer;
+}
+
+    button:hover {
+        background-color: #004d40;
+    }
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 10;
+    width: 300px;
+    text-align: center;
+}
+
+    .popup button {
+        background-color: #00796b;
+        margin-top: 10px;
+    }
+
+        .popup button:hover {
+            background-color: #004d40;
+        }
+
+.cancel-btn {
+    margin-left: 200px;
+    top: 0;
+}
+
+.mandatory {
+    color: red;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .registration-form {
+        width: 90%; /* Adjust width for medium screens */
+        padding: 15px; /* More padding for better touch target */
+    }
+
+    .front {
+        flex-direction: column; /* Stack fields vertically on smaller screens */
+        gap: 20px; /* Reduce gap */
+    }
+
+    .buttons {
+        flex-direction: column; /* Stack buttons vertically */
+    }
+}
+
+@media (max-width: 480px) {
+    .registration-form, .popup {
+        width: 95%; /* Full width on small screens */
+        padding: 10px; /* Adjust padding */
+    }
+
+    button {
+        width: 100%; /* Full width buttons */
+    }
+
+    .form-field {
+        margin-left: 0; /* Remove left margin */
+    }
+
+    .cancel-btn {
+        margin-left: 0; /* Center cancel button */
+    }
+}

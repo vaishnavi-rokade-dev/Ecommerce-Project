@@ -1,0 +1,247 @@
+﻿body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #e0f7fa;
+}
+.navsection {
+    position: fixed;
+    width: 100%;
+    height: 70px;
+    background-color: #e0f7fa;
+    display: flex;
+    gap: 15px;
+    z-index: 1000;
+    margin-top: 0;
+}
+
+.pro {
+    display: flex;
+    font-size: 15px;
+    list-style-type: none;
+    margin-left: 140px;
+    height: 35px;
+    margin-top: 10px;
+}
+
+.headsection {
+    display: flex;
+    gap: 30px;
+}
+
+i:hover {
+    color: #004d40;
+}
+
+button {
+    margin-top: 14px;
+    width: 95px;
+    height: 35px;
+    border-radius: 1em;
+    background-color: #00796b;
+    font-size: 18px;
+    color: white;
+}
+
+    button:hover {
+        background-color: #004d40;
+    }
+
+#accountSection a i {
+    margin-right: 5px;
+    font-size: 2.0em;
+    color: #00796b;
+}
+
+#accountSection {
+    text-align: center;
+    margin-top: 14px;
+}
+
+.account-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+    .account-container i {
+        font-size: 1.5em;
+        margin-bottom: 5px;
+    }
+
+#welcomeMessage {
+    margin-top: 0px;
+    font-size: 0.9em;
+}
+
+a {
+    color: cornsilk;
+    text-decoration: none;
+}
+
+.container {
+    position: relative;
+    margin-top: 100px;
+}
+
+/* Wishlist heart position styling */
+.wishlist {
+    font-size: 30px; /* Increase size for visibility */
+    position: absolute;
+    top: 10px; /* Distance from the top of the image */
+    right: 80px; /* Move the heart slightly left from the right side */
+    z-index: 10; /* Make sure it stays on top of the image */
+}
+
+
+/* Heart icon style */
+.heart {
+    color: white;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    text-shadow: 0 0 2px black, 0 0 4px black;
+    display: inline-block;
+    line-height: 1;
+}
+
+    .heart.active {
+        color: red;
+    }
+
+/* Slideshow Container for the product images */
+.slideshow-container {
+    position: relative;
+    max-width: 500px;
+    margin: auto;
+    overflow: hidden;
+    height: 450px;
+}
+
+/* Slide image styling */
+.slide {
+    display: none;
+    width: 70%; /* Full width of the container */
+    height: 100%;
+    margin-left: 80px;
+}
+
+/* Previous and Next buttons for the slideshow */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    width: 20px;
+    height: 60px;
+    top: 50%;
+    padding: 16px;
+    color: white;
+    background-color: #00796b;
+    border: 2px solid black;
+    border-radius: 3px;
+    font-size: 18px;
+    transition: background-color 0.3s;
+}
+
+    .prev:hover, .next:hover {
+        background-color: #004d40;
+    }
+
+.prev {
+    left: 10px;
+    transform: translateY(-50%);
+}
+
+.next {
+    right: 10px;
+    transform: translateY(-50%);
+}
+
+/* Other product info (like price, size, etc.) */
+.headline {
+    font-size: 25px;
+    margin-left: 550px;
+    font-family: sans-serif;
+}
+
+.prize {
+    margin-left: 550px;
+    color: red;
+    font-size: 20px;
+}
+
+.pr2 {
+    color: #00796b;
+    margin-left: 550px;
+    font-size: 20px;
+}
+
+.pr1 {
+    font-size: 25px;
+    margin-left: 550px;
+    font-family: 'Segoe UI';
+    color: #00796b;
+}
+
+.bold-line {
+    border: none;
+    height: 3px;
+    background-color: black;
+    margin: 20px 0;
+}
+
+/* Dropdown for size selection */
+select {
+    width: 100px;
+    height: 25px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.choose {
+    margin-left: 550px;
+    width: 30px;
+    font-size: 10px;
+}
+
+.sub {
+    height: 30px;
+    width: 5%;
+    font-size: 15px;
+    background-color: white;
+    border-radius: 2em;
+}
+
+    .sub:hover {
+        background-color: #00796b;
+    }
+
+.rate {
+    display: flex;
+    gap: 20px;
+    margin-left: 550px;
+    color: #00796b;
+}
+
+/* Buttons for Add to Cart and Go to Cart */
+.btnadd {
+    margin-left: 550px;
+    display: flex;
+    gap: 20px;
+}
+
+.sub1 {
+    height: 40px;
+    width: 30%;
+    font-size: 15px;
+    background-color: #00796b;
+    border-radius: 2em;
+    color: white;
+}
+
+    .sub1:hover {
+        background-color: #004d40;
+    }
+
+/* Product Name */
+.proname {
+    font-size: 40px;
+    margin-left: 550px;
+}

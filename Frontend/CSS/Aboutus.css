@@ -1,0 +1,255 @@
+﻿*{
+    font-family: sans-serif;
+    margin: 0;
+}
+.navsection {
+    position: fixed;
+    width: 100%;
+    height: 70px;
+    background-color: #e0f7fa;
+    display: flex;
+    gap: 15px;
+    z-index: 1000;
+    margin-top: 0;
+}
+
+.pro {
+    display: flex;
+    font-size: 15px;
+    list-style-type: none;
+    margin-left: 140px;
+    height: 35px;
+    margin-top: 10px;
+}
+
+.headsection {
+    display: flex;
+    gap: 30px;
+}
+
+i:hover {
+    color: #004d40;
+}
+
+button {
+    margin-top: 14px;
+    width: 95px;
+    height: 35px;
+    border-radius: 1em;
+    background-color: #00796b;
+    font-size: 18px;
+    color: white;
+}
+
+    button:hover {
+        background-color: #004d40;
+    }
+
+#accountSection a i {
+    margin-right: 5px;
+    font-size: 2.0em;
+    color: #00796b;
+}
+
+#accountSection {
+    text-align: center;
+    margin-top: 14px;
+}
+
+.account-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+    .account-container i {
+        font-size: 1.5em;
+        margin-bottom: 5px;
+    }
+
+#welcomeMessage {
+    margin-top: 0px;
+    font-size: 0.9em;
+}
+
+/*a {
+    color: cornsilk;
+    text-decoration: none;
+}*/
+
+a{
+    text-decoration: none;
+    color: white;
+}
+.abouthead{
+    margin-left: 30px;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+}
+body{
+    background: whitesmoke;
+    justify-content: center;
+   /* height: 100vh;*/
+    align-items: center;
+}
+.container {
+    display: flex;
+}
+.card{
+    height: 520px;
+    margin: 50px;
+    box-shadow: 5px 5px 20px black;
+    overflow: hidden;
+}
+.ima {
+    height: 500px;
+    width: 350px;
+    border-radius: 3px;
+}
+.intro {
+    height: 100px;
+    width: 350px;
+    padding: 6px;
+    box-sizing: border-box;
+    position: absolute;
+    background: rgb(27,27,27,0.5);
+    color: white;
+    transition: .5s;
+}
+h1{
+    margin: 9px;
+    font-size: 30px;
+}
+p{
+    font-size: 18px;
+    margin: 0px;
+    font-family: cursive;
+    visibility: hidden;
+    opacity: 0;
+}
+span{
+    font-weight: bold;
+}
+.card:hover {
+    cursor: pointer;
+}
+.card:hover .intro{
+    height: 220px;
+    bottom: 20px;
+    background: black;
+}
+.card:hover p{
+    opacity: 1;
+    visibility: visible;
+}
+.card:hover .ima{
+    transform: scale(1.1) rotate(-3deg);
+}
+.slideshow-container {
+    position: relative;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+    height: 700px;
+}
+
+.slide {
+    display: none;
+    width: 95%;
+    margin-top: 80px;
+    margin-left: 30px;
+    align-items: center;
+    border: 2px solid black;
+}
+
+.wid1 {
+    width: 600px;
+    height: 200px;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    padding: 16px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 2px solid black;
+    border-radius: 3px;
+    font-size: 18px;
+    transition: background-color 0.3s;
+}
+
+    .prev:hover, .next:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+
+.prev {
+    left: 10px;
+    transform: translateY(-50%);
+}
+
+.next {
+    right: 10px;
+    transform: translateY(-50%);
+}
+.para{
+    font-size: 25px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-left: 50px;
+    font-weight: bold;
+}
+
+@media (max-width: 800px) {
+    .abouthead {
+        font-size: 35px; /* Smaller for tablets */
+    }
+
+    .container {
+        flex-direction: column; /* Stack cards vertically */
+        align-items: center; /* Center cards */
+    }
+
+    .card {
+        height: 400px; /* Further adjust height */
+        width: 90%; /* Full width on small screens */
+        margin: 10px 0; /* Space between cards */
+    }
+
+    .ima {
+        width: 100%; /* Full width image */
+    }
+
+    .para {
+        margin-left: 0; /* Center text on small screens */
+        text-align: center; /* Center alignment */
+    }
+}
+
+@media (max-width: 500px) {
+    .abouthead {
+        font-size: 30px; /* Smallest font size */
+    }
+
+    .card {
+        height: 350px; /* Adjust for mobile */
+    }
+
+    .ima {
+        height: 200px; /* Adjust image height */
+    }
+
+    h1 {
+        font-size: 24px; /* Smaller heading */
+    }
+
+    p {
+        font-size: 16px; /* Smaller paragraph text */
+    }
+
+    .prev, .next {
+        padding: 10px; /* Smaller buttons */
+        font-size: 14px; /* Smaller text */
+    }
+}

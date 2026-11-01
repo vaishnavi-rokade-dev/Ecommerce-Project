@@ -1,0 +1,98 @@
+﻿/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+.background {
+    background-image: "";
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container */
+.container {
+    width: 100%;
+    max-width: 400px;
+    background-color: violet;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+/* Form Styles */
+.signin-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.input-group {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+    .input-group label {
+        margin-bottom: 5px;
+        color: #555;
+    }
+
+    .input-group input[type="email"],
+    .input-group input[type="password"] {
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        transition: border-color 0.3s;
+    }
+
+        .input-group input[type="email"]:focus,
+        .input-group input[type="password"]:focus {
+            border-color: #4a90e2;
+            outline: none;
+        }
+
+    .input-group input[type="checkbox"] {
+        width: auto;
+        margin-right: 5px;
+    }
+
+/* Button Styles */
+.btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+    .btn:hover {
+        background-color: #357abd;
+    }
+
+/* Alternative Option */
+.alt-option {
+    text-align: center;
+    margin-top: 10px;
+    color: #555;
+}
+
+    .alt-option a {
+        color: #4a90e2;
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+
+        .alt-option a:hover {
+            color: #357abd;
+        }

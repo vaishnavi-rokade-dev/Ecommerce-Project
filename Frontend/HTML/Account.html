@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Page</title>
+    <link href="../css/Account.css" rel="stylesheet" />
+    <script src="../js/Allproduct.js"></script>
+</head>
+<body>
+    <nav>
+        <div class="navsection">
+            <div class="logo"><img src="../image/Screenshot (234).png" width="300" height="50" /></div>
+            <div class="headsection">
+                <div class="pro">
+                    <select id="pageDropdown" onchange="navigateToPage()">
+                        <option>product category</option>
+                        <option value="Alltshirt.html">T-shirt</option>
+                        <option value="Allkurti.html">Womens-Kurti</option>
+                        <option value="AllFormal.html">Formal Shirt</option>
+                        <option value="Allelectronics.html">Electronics</option>
+                        <option value="Allsaree.html">Saree</option>
+                        <option value="Allkids.html">Kids</option>
+                        <option value="Allhomeproduct.html">Home Product</option>
+                    </select>
+                </div>
+                <button type="button" onclick="Home()">Home</button>
+                <button type="button" onclick="AddCart()">Cart</button>
+
+                <div><button type="button" onclick="About()">About</button></div>
+
+                <button type="button" onclick="LoginMain()">Login</button>
+
+                <div id="accountSection">
+                    <a href="#">
+                        <div class="account-container">
+                            <i class="fas fa-user-circle"></i>
+                            <div id="welcomeMessage" style="font-size: 20px; color: #004d40"></div>
+                        </div>
+                    </a>
+                </div>
+                <button type="button" onclick="logout()">Logout</button>
+            </div>
+        </div>
+    </nav><br /><br /><br /><br /><hr /><br />
+    <div class="account-page">
+        <h2>Your Account Information</h2>
+
+        <!-- Display Fields -->
+        <div class="form-field">
+            <label>Name:</label>
+            <span id="nameField"></span>
+            <input type="text" id="nameInput" style="display:none;" />
+        </div>
+        <div class="form-field">
+            <label>Mobile Number:</label>
+            <span id="mobileField"></span>
+            <input type="tel" id="mobileInput" style="display:none;" />
+        </div>
+        <div class="form-field">
+            <label>Email:</label>
+            <span id="emailField"></span>
+            <input type="email" id="emailInput" style="display:none;" />
+        </div>
+        <div class="form-field">
+            <label>Country:</label>
+            <span id="countryField"></span>
+            <input type="text" id="countryInput" style="display:none;" />
+        </div>
+        <div class="form-field">
+            <label>District:</label>
+            <span id="districtField"></span>
+            <input type="text" id="districtInput" style="display:none;" />
+        </div>
+        <div class="form-field">
+            <label>Taluka:</label>
+            <span id="talukaField"></span>
+            <input type="text" id="talukaInput" style="display:none;" />
+        </div>
+        <div class="form-field">
+            <label>City:</label>
+            <span id="cityField"></span>
+            <input type="text" id="cityInput" style="display:none;" />
+        </div>
+        <div class="form-field">
+            <label>Street:</label>
+            <span id="streetField"></span>
+            <input type="text" id="streetInput" style="display:none;" />
+        </div>
+        <div class="form-field">
+            <label>Zip:</label>
+            <span id="zipField"></span>
+            <input type="text" id="zipInput" style="display:none;" />
+        </div>
+        <div class="btn">
+            <center><button id="editButton" onclick="editDetails()">Edit</button></center>
+            <button id="saveButton" onclick="saveDetails()">Save</button>
+        </div>
+    </div>
+
+    <script src="../js/Account.js"></script>
+</body>
+</html>

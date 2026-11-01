@@ -1,0 +1,308 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="../js/Allproduct.js"></script>
+    <style>
+        body {
+            background-color: #e0f7fa; 
+            font-family: Arial, sans-serif;
+        }
+        .navsection {
+            position: fixed;
+            width: 100%;
+            height: 70px;
+            background-color: #e0f7fa;
+            display: flex;
+            gap: 15px;
+            z-index: 1000;
+            margin-top: 0;
+        }
+
+        .pro {
+            display: flex;
+            font-size: 15px;
+            list-style-type: none;
+            margin-left: 140px;
+            height: 35px;
+            margin-top: 10px;
+        }
+
+        .headsection {
+            display: flex;
+            gap: 30px;
+        }
+
+        i:hover {
+            color: #004d40;
+        }
+
+        button {
+            margin-top: 14px;
+            width: 95px;
+            height: 35px;
+            border-radius: 1em;
+            background-color: #00796b;
+            font-size: 18px;
+            color: white;
+        }
+
+            button:hover {
+                background-color: #004d40;
+            }
+
+        #accountSection a i {
+            margin-right: 5px;
+            font-size: 2.0em;
+            color: #00796b;
+        }
+
+        #accountSection {
+            text-align: center;
+            margin-top: 14px;
+        }
+
+        .account-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+            .account-container i {
+                font-size: 1.5em;
+                margin-bottom: 5px;
+            }
+
+        #welcomeMessage {
+            margin-top: 0px;
+            font-size: 0.9em;
+        }
+
+        
+        .container {
+            margin-top: 50px;
+            margin-left: 400px;
+            max-width: 550px;
+            padding: 20px;
+            background: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            height: 520px;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        textarea {
+            resize: vertical; 
+        }
+
+        .error {
+            color: red;
+            font-size: 0.8em;
+            display: none; 
+        }
+        .popup {
+            display: none; 
+            position: fixed;
+            top: -100px;
+            left: 50%;
+            transform: translate(-50%, 0);
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            z-index: 1000; 
+            text-align: center;
+            transition: top 0.5s ease, opacity 0.5s ease; 
+            opacity: 0;
+        }
+            .popup.show {
+                top: 50px; 
+                opacity: 1; 
+            }
+            .popup button {
+                margin-top: 10px;
+                padding: 10px;
+                background-color: #00796b; 
+                color: white;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+
+                .popup button:hover {
+                    background-color: #004d40; 
+                }
+       .saperate{
+           display: flex;
+           gap: 10px;
+       }
+        .location {
+            width: 200px;
+            height: 50px;
+            filter: invert(100%);
+        }
+       .moreinfo{
+           margin-left: 2px;
+           font-weight: bold;
+           font-size: 18px;
+       }
+        .contacts {
+            margin-left: 2px;
+            font-size: 15px;
+            font-family: cursive;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('contactForm').addEventListener('submit', function (event) {
+                event.preventDefault(); // Prevent the default form submission
+
+                // Clear previous error messages
+                document.getElementById('nameError').textContent = '';
+                document.getElementById('emailError').textContent = '';
+                document.getElementById('messageError').textContent = '';
+
+                let isValid = true; // Flag to check overall validity
+
+                // Name validation
+                const name = document.getElementById('name').value.trim();
+                if (name.length < 3) {
+                    document.getElementById('nameError').textContent = 'Name must be at least 3 characters long.';
+                    document.getElementById('nameError').style.display = 'block';
+                    isValid = false;
+                }
+
+                // Email validation
+                const email = document.getElementById('email').value.trim();
+                const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Simple regex for email validation
+                if (!emailPattern.test(email)) {
+                    document.getElementById('emailError').textContent = 'Please enter a valid email address.';
+                    document.getElementById('emailError').style.display = 'block';
+                    isValid = false;
+                }
+
+                // Message validation
+                const message = document.getElementById('message').value.trim();
+                if (message.length < 10) {
+                    document.getElementById('messageError').textContent = 'Message must be at least 10 characters long.';
+                    document.getElementById('messageError').style.display = 'block';
+                    isValid = false;
+                }
+
+                // If valid, show the success popup
+                if (isValid) {
+                    const popup = document.getElementById('popup');
+                    popup.style.display = 'block'; // Show the popup
+                    setTimeout(() => {
+                        popup.classList.add('show'); // Add class to trigger animation
+                    }, 10); // Small delay for the animation to take effect
+                }
+            });
+
+            // Function to close the popup
+            window.closePopup = function () {
+                const popup = document.getElementById('popup');
+                popup.classList.remove('show'); // Remove class to hide it
+                setTimeout(() => {
+                    popup.style.display = 'none'; // Hide the popup after animation
+                }, 500); // Match this duration with the transition duration in CSS
+            };
+        });
+    </script>
+</head>
+<body>
+    <nav>
+        <div class="navsection">
+            <div class="logo"><img src="../image/Screenshot (234).png" width="300" height="50" /></div>
+            <div class="headsection">
+                <div class="pro">
+                    <select id="pageDropdown" onchange="navigateToPage()">
+                        <option>product category</option>
+                        <option value="Alltshirt.html">T-shirt</option>
+                        <option value="Allkurti.html">Womens-Kurti</option>
+                        <option value="AllFormal.html">Formal Shirt</option>
+                        <option value="Allelectronics.html">Electronics</option>
+                        <option value="Allsaree.html">Saree</option>
+                        <option value="Allkids.html">Kids</option>
+                        <option value="Allhomeproduct.html">Home Product</option>
+                    </select>
+                </div>
+                <button type="button" onclick="Home()">Home</button>
+                <button type="button" onclick="AddCart()">Cart</button>
+
+                <div><button type="button" onclick="About()">About</button></div>
+
+                <button type="button" onclick="LoginMain()">Login</button>
+
+                <div id="accountSection">
+                    <a href="#">
+                        <div class="account-container">
+                            <i class="fas fa-user-circle"></i>
+                            <div id="welcomeMessage" style="font-size: 20px; color: #004d40"></div>
+                        </div>
+                    </a>
+                </div>
+                <button type="button" onclick="logout()">Logout</button>
+            </div>
+        </div>
+    </nav><br /><br /><br /><br /><hr />
+    <div class="container">
+        <form id="contactForm">
+            <h2>Contact Us</h2>
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+            <span class="error" id="nameError"></span>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+            <span class="error" id="emailError"></span>
+
+            <label for="message">Message:</label>
+            <textarea id="message" required></textarea>
+            <span class="error" id="messageError"></span>
+
+            <button type="submit">Send</button>
+        </form><br /><br />
+        <div class="saperate">
+            <div>
+                <div class="moreinfo">
+                    For More Information
+                </div><br />
+                <div class="contacts">
+                    Email: trendify04@gmail.com<br /><br />
+                    Contact No: 9730929665
+                </div>
+            </div>
+            <div class="location">
+                <iframe class="ifr1" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d485490.51656733995!2d73.58733593479145!3d18.076430644545628!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2f4fe651973ab%3A0xf4eca6f2653b9f2a!2sAbhinav%20Education%20Society%20College%20of%20Engineering%20(Polytechnic)!5e0!3m2!1sen!2sin!4v1728796670727!5m2!1sen!2sin"
+                        style="border:0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <div id="popup" class="popup">
+        <h2>Success!</h2>
+        <p>Your message has been successfully submitted.<br /><br />Our Team Will Contact With you.</p>
+        <button onclick="closePopup()">Close</button>
+    </div>
+</body>
+</html>

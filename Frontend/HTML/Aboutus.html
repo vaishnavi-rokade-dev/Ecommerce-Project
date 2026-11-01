@@ -1,0 +1,128 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>About Page</title>
+    <link href="../css/Aboutus.css" rel="stylesheet" />
+    <script src="../js/Allproduct.js"></script>
+</head>
+<body>
+    <nav>
+        <div class="navsection">
+            <div class="logo"><img src="../image/Screenshot (234).png" width="300" height="50" /></div>
+            <div class="headsection">
+                <div class="pro">
+                    <select id="pageDropdown" onchange="navigateToPage()">
+                        <option>product category</option>
+                        <option value="Alltshirt.html">T-shirt</option>
+                        <option value="Allkurti.html">Womens-Kurti</option>
+                        <option value="AllFormal.html">Formal Shirt</option>
+                        <option value="Allelectronics.html">Electronics</option>
+                        <option value="Allsaree.html">Saree</option>
+                        <option value="Allkids.html">Kids</option>
+                        <option value="Allhomeproduct.html">Home Product</option>
+                    </select>
+                </div>
+                <button type="button" onclick="Home()">Home</button>
+                <button type="button" onclick="AddCart()">Cart</button>
+
+                <div><button type="button" onclick="About()">About</button></div>
+
+                <button type="button" onclick="LoginMain()">Login</button>
+
+                <div id="accountSection">
+                    <a href="#">
+                        <div class="account-container">
+                            <i class="fas fa-user-circle"></i>
+                            <div id="welcomeMessage" style="font-size: 20px; color: #004d40"></div>
+                        </div>
+                    </a>
+                </div>
+                <button type="button" onclick="logout()">Logout</button>
+            </div>
+        </div>
+    </nav><br /><br /><br /><hr /><br />
+    <div class="abouthead">About Us</div><br />
+
+    <div class="container">
+        <div class="card">
+            <div class="ima">
+                <img src="../image/About8.jpg" alt="" />
+            </div>
+            <div class="intro">
+                <h1>
+                    Where?
+                </h1>
+                <p>
+                    The trendify office located at near <span><a href="https://abhinavcomputerscience.org/">Abhinav Education Society</a></span>
+                    In Trendify having approximately 10000+ workers are work.<br />All Trendify Employees are hardworker and smart.
+                </p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="ima">
+                <img src="../image/About5.jpg" alt="" />
+            </div>
+            <div class="intro">
+                <h1>
+                    "Why take it?"
+                </h1>
+                <p>
+                    "Our customers are satisfied with our products, and they are truly impressed with Trendify.
+                    The products are completely pure, and they are also available at healthy prices on Trendify."
+                </p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="ima">
+                <img src="../image/About4.jpg" alt="" />
+            </div>
+            <div class="intro">
+                <h1>
+                    Delievery
+                </h1>
+                <p>
+                    "Trendify is providing products that are healthy and stylish for everyone.
+                    You search for the products you love and buy them; this is the essence of Trendify's work."
+                </p>
+            </div>
+        </div>
+    </div><br /><br /><hr /><br /><br />
+    <div class="abouthead">
+        Trendify Because Of them!
+    </div>
+    <div class="slideshow-container">
+        <img class="slide" src="../image/Friends.jpg" height="600" alt="Image 1">
+        <img class="slide" src="../image/trendifyabout.jpg" height="600" alt="Image 2">
+        <img class="slide" src="../image/About8.jpg" height="600" alt="Image 3">
+        <img class="slide" src="../image/friends1.jpg" height="600" alt="Image 4">
+        <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+        <button class="next" onclick="changeSlide(1)">&#10095;</button>
+    </div>
+    <center><h1>History Of Trendify</h1></center><br />
+    <div class="para">
+        <div class="para">
+            Trendify starts their work in 1997. Trendify sell the different types of product to the peoples.
+            Four girls Vaishnavi Rokade ,Srushti Dhole, Shweta Thorat and Saylee Dhanawade came together and started a small clothing business.
+            They entered into this partnership and initially faced some losses,
+            but they didn’t lose hope and kept working hard. Their slogan is: 'Find it, love it, and buy it.
+            Trendify always says that one should never give up and that girls can start their own businesses.
+            A business that started with 2 lakh rupees is now generating crores in revenue.
+        </div>
+    </div>
+    <br />
+    <center>
+        <h1>
+            Next Step Of Trendify
+        </h1>
+    </center>
+
+    <div class="para">
+        Trendify is currently selling its products only in India, but soon it will also sell products outside the country.
+        There will be a wide availability and attractiveness of these products, which you will love and appreciate.
+        The designs will be unique and appealing.
+        Your support so far has been invaluable, so keep collaborating like this in the future.
+    </div><br /><br />
+    <script src="../js/slideshowaboutus.js"></script>
+</body>
+</html>

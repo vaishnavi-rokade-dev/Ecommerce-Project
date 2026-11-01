@@ -1,0 +1,168 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Return Policy</title>
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #3bd3d8;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+        }
+
+        .policy-content {
+            background-color: white;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 800px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2, h3 {
+            color: #2c3e50;
+        }
+
+        ul {
+            list-style-type: square;
+            padding-left: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            margin-top: 20px;
+        }
+
+        label {
+            margin: 10px 0 5px;
+        }
+
+        input, textarea {
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #27ae60;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+            button:hover {
+                background-color: #2ecc71;
+            }
+
+        #confirmationMessage {
+            background-color: #27ae60;
+            color: white;
+            padding: 10px;
+            border-radius: 4px;
+            margin-top: 20px;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #23cde3;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Our Return Policy</h1>
+    </header>
+
+    <section class="policy-content">
+        <h2>General Return Information</h2>
+        <p>We want you to be satisfied with your purchase. If you're not happy with your items, you can return them within 30 days of receipt for a full refund. Items must be in their original condition.</p>
+
+        <h3>Eligibility for Returns</h3>
+        <ul>
+            <li>Items must be unused and in the original packaging.</li>
+            <li>Items should be returned within 7 days of the delivery date.</li>
+            <li>Items purchased on sale or clearance may not be eligible for return.</li>
+        </ul>
+
+        <h3>How to Return an Item</h3>
+        <p>To initiate a return, please fill out the form below, and our customer service team will guide you through the process.</p>
+
+        <form id="returnForm">
+            <label for="orderNumber">Order Number:</label>
+            <input type="text" id="orderNumber" name="orderNumber" required>
+
+            <label for="reason">Reason for Return:</label>
+            <textarea id="reason" name="reason" required></textarea>
+
+            <button type="submit">Submit Return Request</button>
+        </form>
+
+        <div id="confirmationMessage" class="hidden">
+            <p>Your return request has been submitted. We will contact you soon.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Trendify Company. All rights reserved.</p>
+    </footer>
+
+    <script>document.getElementById("returnForm").addEventListener("submit", function (event) {
+    event.preventDefault(); // Prevent form submission
+
+    const orderNumber = document.getElementById("orderNumber").value.trim();
+    const reason = document.getElementById("reason").value.trim();
+
+    // Validate that the order number contains only digits
+    const orderNumberPattern = /^\d+$/;
+
+    if (!orderNumberPattern.test(orderNumber)) {
+        alert("Order number must contain only numeric digits. Please correct it.");
+        return; // Stop submission if validation fails
+    }
+
+    if (!reason) {
+        alert("Please provide a reason for the return.");
+        return; // Stop submission if reason is empty
+    }
+
+    // If validation passes, show confirmation message
+    document.getElementById("confirmationMessage").classList.remove("hidden");
+
+    // Optionally, reset the form
+    document.getElementById("returnForm").reset();
+});
+
+document.getElementById("orderNumber").addEventListener("input", function () {
+    this.value = this.value.replace(/[^0-9]/g, ""); // Replace non-numeric characters with an empty string
+});</script>
+</body>
+</html>

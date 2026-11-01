@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formal Shirt</title>
+    <link href="../css/product.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="slideshow-container">
+        <img class="slide" src="../image/Formalshirtsaylee/formalshirt2.jpg" height="400" alt="Image 1">
+        <img class="slide" src="../image/Formalshirtsaylee/formalback2.jpg" height="400" alt="Image 2">
+        <img class="slide" src="../image/Formalshirtsaylee/formalside2.jpg" heigh="400" alt="Image 3">
+        <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+        <button class="next" onclick="changeSlide(1)">&#10095;</button>
+    </div><hr class="bold-line" />
+    <p class="proname"><b>Cotton Shirt</b></p>
+    <div class="headline">
+        <b>PRIZE:</b>
+    </div>
+    <div class="prize">
+        <p>- Rs<del>500/-</del></p>
+    </div>
+    <div class="pr2">
+        <b>- 25% off</b>
+    </div>
+    <div class="pr1">
+        <b>- Only in Rs 250/-</b>
+    </div><br />
+    <div class="headline">
+        <b>SIZE:</b>
+    </div><br />
+    <div class="choose">
+        <select>
+            <option>Size</option>
+            <option>M</option>
+            <option>XL</option>
+            <option>XXL</option>
+            <option>XXXL</option>
+        </select>
+    </div><br /><br />
+    <div class="headline"><b>RATING:</b></div>
+    <div class="rate">
+        <h1>&#9733;</h1>
+        <h1>&#9733;</h1>
+        <h1>&#9733;</h1>
+        <h1>&#9733;</h1>
+        <h1>&#9733;</h1>
+    </div>
+    <div class="btnadd">
+        <button type="button" class="sub1" id="addFormal1">Add To Cart</button>
+        <button type="button" class="sub1" onclick="goToCart()">Go to Cart</button>
+    </div>
+    <script src="../js/kurti.js"></script>
+    <script>
+        document.getElementById('addFormal1').addEventListener('click', function () {
+            const productName = "Cotton Shirt"; // Update as necessary
+            const price = 250; // Price after discount
+            const image = "../image/Formalshirtsaylee/formalshirt2.jpg"; // Default image (you can change based on selection)
+            const sizeDropdown = document.querySelector('.choose select');
+            const size = sizeDropdown.value;
+
+            if (size === "Size") {
+                alert("Please select a size before adding to the cart.");
+                return;
+            }
+
+
+            addToCart(productName, price, image, size);
+
+
+            alert(`${productName} added to cart successfully!`);
+        });
+
+
+        function addToCart(productName, price, image, size) {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const existingProductIndex = cart.findIndex(item => item.name === productName && item.size === size);
+
+            if (existingProductIndex > -1) {
+                cart[existingProductIndex].quantity += 1;
+            } else {
+                cart.push({ name: productName, price: price, image: image, size: size, quantity: 1 });
+            }
+
+            localStorage.setItem('cart', JSON.stringify(cart));
+        }
+
+        function goToCart() {
+            window.location.href = "Addcart.html";
+
+        }
+
+    </script>
+</body>
+</html>

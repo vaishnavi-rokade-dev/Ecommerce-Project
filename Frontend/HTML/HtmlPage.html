@@ -1,0 +1,213 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finance - Trendify</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f8f8;
+        }
+
+        header {
+            background-color: #333;
+            padding: 20px;
+            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .navbar .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .navbar .nav-links {
+            list-style: none;
+            display: flex;
+            justify-content: flex-end;
+            gap: 20px;
+        }
+
+            .navbar .nav-links a {
+                color: white;
+                text-decoration: none;
+                font-size: 18px;
+                transition: color 0.3s ease;
+            }
+
+                .navbar .nav-links a:hover {
+                    color: #ff5722;
+                }
+
+        .finance-section {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+            .finance-section h1 {
+                font-size: 36px;
+                margin-bottom: 20px;
+            }
+
+            .finance-section p {
+                font-size: 18px;
+                margin-bottom: 40px;
+            }
+
+        .payment-methods, .installment-options, .contact-finance {
+            margin-bottom: 40px;
+        }
+
+        .method-cards, .installment-info {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .payment-card, .installment-card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 250px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+            .payment-card img {
+                width: 100px;
+                margin-bottom: 15px;
+            }
+
+            .payment-card h3 {
+                font-size: 20px;
+                margin-bottom: 10px;
+            }
+
+            .payment-card p {
+                color: #666;
+            }
+
+            .payment-card:hover {
+                transform: translateY(-10px);
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            }
+
+            .installment-card h3 {
+                font-size: 20px;
+                margin-bottom: 10px;
+            }
+
+            .installment-card p {
+                color: #666;
+            }
+
+        .contact-btn {
+            background-color: #ff5722;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            font-size: 18px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+            .contact-btn:hover {
+                background-color: #e64a19;
+            }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">Trendify</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#shop">Shop</a></li>
+                <li><a href="#finance">Finance</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Finance Section -->
+    <section id="finance" class="finance-section">
+        <h1>Flexible Payment Options at Trendify</h1>
+        <p>We make shopping at Trendify easy and affordable with a variety of payment options to suit your needs!</p>
+
+        <!-- Payment Methods -->
+        <div class="payment-methods">
+            <h2>Payment Methods</h2>
+            <div class="method-cards">
+                <div class="payment-card">
+                    <img src="https://via.placeholder.com/150x75?text=Credit+Card" alt="Credit Card" />
+                    <h3>Credit/Debit Cards</h3>
+                    <p>Secure payment through major credit and debit cards.</p>
+                </div>
+                <div class="payment-card">
+                    <img src="https://via.placeholder.com/150x75?text=PayPal" alt="PayPal" />
+                    <h3>PayPal</h3>
+                    <p>Fast and secure payments through PayPal.</p>
+                </div>
+                <div class="payment-card">
+                    <img src="https://via.placeholder.com/150x75?text=Bank+Transfer" alt="Bank Transfer" />
+                    <h3>Bank Transfer</h3>
+                    <p>Make secure payments via bank transfer for larger purchases.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Installment Plans -->
+        <div class="installment-options">
+            <h2>Installment Plans</h2>
+            <p>Spread out the cost of your purchase with our flexible installment options.</p>
+            <div class="installment-info">
+                <div class="installment-card">
+                    <h3>3 Months Plan</h3>
+                    <p>Pay in 3 equal installments.</p>
+                </div>
+                <div class="installment-card">
+                    <h3>6 Months Plan</h3>
+                    <p>Pay in 6 equal installments.</p>
+                </div>
+                <div class="installment-card">
+                    <h3>12 Months Plan</h3>
+                    <p>Pay in 12 easy monthly installments.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Finance Contact -->
+        <div class="contact-finance">
+            <h2>Contact Us for Finance Queries</h2>
+            <p>If you have any questions regarding payment options or financing, feel free to reach out to our finance team.</p>
+            <a href="#contact" class="contact-btn">Contact Us</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Trendify. All Rights Reserved.</p>
+    </footer>
+
+
+</body>
+</html>

@@ -1,0 +1,258 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Main Project</title>
+    <link href="../css/project.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="../js/mainproject.js" defer></script>
+</head>
+<body>
+    <div class="mainproject" id="mainproject">
+        <nav>
+            <div class="navsection">
+                <div class="logo"><img src="../image/Screenshot (234).png" width="300" height="50" /></div>
+                <div class="headsection">
+                    <div class="pro">
+                        <select id="pageDropdown" onchange="navigateToPage()">
+                            <option>product category</option>
+                            <option value="Alltshirt.html">T-shirt</option>
+                            <option value="Allkurti.html">Womens-Kurti</option>
+                            <option value="AllFormal.html">Formal Shirt</option>
+                            <option value="Allelectronics.html">Electronics</option>
+                            <option value="Allsaree.html">Saree</option>
+                            <option value="Allkids.html">Kids</option>
+                            <option value="Allhomeproduct.html">Home Product</option>
+                        </select>
+                    </div>
+                    <button type="button" onclick="Home()">Home</button>
+                    <button type="button" onclick="AddCart()">Cart</button>
+
+                    <button type="button" onclick="About()">About</button>
+
+                    <button type="button" onclick="LoginMain()">Login</button>
+
+                    <div id="accountSection">
+                        <a href="#">
+                            <div class="account-container">
+                                <i class="fas fa-user-circle"></i>
+                                <div id="welcomeMessage" style="font-size: 20px; color: #004d40"></div>
+                            </div>
+                        </a>
+                    </div>
+                    <button type="button" onclick="logout()">Logout</button>
+
+                </div>
+            </div>
+            </nav>
+       
+        <div class="slideshow-container">
+            <img class="slide" src="../image/backecommerce.jpeg" height="600" alt="Image 1">
+            <img class="slide" src="../image/background5.jpg" height="600" alt="Image 5" />
+            <img class="slide" src="../image/online-shopping.jpg" height="600" alt="Image 2">
+            <img class="slide" src="../image/backgroundmain.jpg" height="600" alt="Image 5" />
+            <img class="slide" src="../image/background8.jpg" height="600" alt="Image 5" />
+        
+        </div><hr class="bold-line" />
+
+              <div class="view">
+                  <div class="img-container">
+                      <div class="box">
+                          <a href="Allkurti.html">
+                              <img src="../image/ledieskurti.jpeg" width="290" height="310" />
+                          </a>
+                          <div class="name">
+                              Kurti
+                          </div>
+                      </div>
+
+                      <div class="box">
+                          <a href="../html/AllFormal.html">
+                              <img src="../image/mens-formal-shirt.jpg" width="290" height="310" />
+                          </a>
+                          <div class="name">
+                              Formal Shirt
+                          </div>
+                      </div>
+
+                      <div class="box">
+                          <a href="Allkids.html">
+                              <img src="../image/kidsderess.jpeg" width="290" height="310" />
+                          </a>
+                          <div class="name">
+                              Kids Wear
+                          </div>
+                      </div>
+                      <div class="box">
+                          <a href="Allsaree.html">
+                              <img src="../image/navvari saree.jpg" width="270" height="310" />
+                          </a>
+                          <div class="name">
+                              Saree Collection
+                          </div>
+                      </div>
+                  </div>
+                  <div class="img-container">
+                      <div class="box">
+                          <a href="../html/Allelectronics.html">
+                              <img src="../image/cakemeker.jpeg" width="290" height="310" />
+                          </a>
+                          <div class="name">
+                              Electronics
+                          </div>
+                      </div>
+
+                      <div class="box">
+                              <a href="allentertendment.html">
+                                  <img src="../image/smarttv.jpeg" width="290" height="310" />
+                              </a>
+                              <div class="name">
+                                  Entertainment
+                              </div>
+</div>
+
+                      <div class="box">
+                          <a href="Allhomeproduct.html">
+                              <img src="../image/homeproduct.jpeg" width="290" height="310" />
+                          </a>
+                          <div class="name">
+                              Homeproduct
+                          </div>
+                      </div>
+
+                      <div class="box">
+                          <a href="Alltshirt.html">
+                              <img src="../image/ment3.jpg" width="290" height="310" />
+                          </a>
+                          <div class="name">
+                              Mens-T-Shirt
+                          </div>
+                      </div>
+                  </div>
+                  <center><h1>Latest Women's Collection</h1></center>
+                  <div class="smoothslide">
+                      <div class="slideshow-container1">
+                          <div class="slideshow-images1">
+                              <img src="../image/sareesayali/saree8.jpg" alt="Image 1">
+                              <img src="../image/sareesayali/saree2.jpg" alt="Image 2">
+                              <img src="../image/sareesayali/saree4.jpg" alt="Image 3">
+                              <img src="../image/sareesayali/saree6.jpg" alt="Image 4">
+                              <img src="../image/sareesayali/saree10.jpg" alt="Image 5">
+                          </div>
+                      </div>
+                      <div class="slideshow-container1">
+                          <div class="slideshow-images1">
+                              <img src="../image/kurtisrushti/kurti9.jpg" alt="Image 1">
+                              <img src="../image/kurtisrushti/kurti3.jpg" alt="Image 2">
+                              <img src="../image/kurtisrushti/kurti10.jpg" alt="Image 3">
+                              <img src="../image/kurtisrushti/kurti4.jpg" alt="Image 4">
+                              <img src="../image/kurtisrushti/kurti5.jpg" alt="Image 5">
+                          </div>
+                      </div>
+                      <div class="slideshow-container1">
+                          <div class="slideshow-images1">
+                              <img src="../image/slideshowmain/dress1.png" alt="Image 1">
+                              <img src="../image/slideshowmain/dress2.png" alt="Image 2">
+                              <img src="../image/slideshowmain/dress3.png" alt="Image 3">
+                              <img src="../image/slideshowmain/dress4.png" alt="Image 4">
+                              <img src="../image/slideshowmain/dress5.png" alt="Image 5">
+                          </div>
+                      </div>
+                  </div><br /><br /><br /><br />
+                  <center><h1>Letest Men's Collection</h1></center>
+                  <div class="smoothslide">
+                      <div class="slideshow-container1">
+                          <div class="slideshow-images1">
+                              <img src="../image/Formalshirtsaylee/formalshirt10.jpg" alt="Image 1">
+                              <img src="../image/Formalshirtsaylee/formalshirt1.jpg" alt="Image 2">
+                              <img src="../image/Formalshirtsaylee/formalshirt3.jpg" alt="Image 3">
+                              <img src="../image/Formalshirtsaylee/formalshirt4.jpg" alt="Image 4">
+                              <img src="../image/Formalshirtsaylee/formalshirt7.jpg" alt="Image 5">
+                          </div>
+                      </div>
+
+
+                      <div class="slideshow-container1">
+                          <div class="slideshow-images1">
+                              <img src="../image/slideshowmain/kurta1.png" alt="Image 1">
+                              <img src="../image/slideshowmain/kurta2.png" alt="Image 2">
+                              <img src="../image/slideshowmain/kurta3.png" alt="Image 3">
+                              <img src="../image/slideshowmain/kurta4.png" alt="Image 4">
+                              <img src="../image/slideshowmain/kurta5.png" alt="Image 5">
+                          </div>
+                      </div>
+
+
+                      <div class="slideshow-container1">
+                          <div class="slideshow-images1">
+                              <img src="../image/tshirtshweta/tshirt8.jpg" alt="Image 1">
+                              <img src="../image/tshirtshweta/tshirt3.jpg" alt="Image 2">
+                              <img src="../image/tshirtshweta/tshirt.jpg" alt="Image 3">
+                              <img src="../image/tshirtshweta/tshirt7.jpg" alt="Image 4">
+                              <img src="../image/tshirtshweta/tshirt1.jpg" alt="Image 5">
+                          </div>
+                      </div>
+                  </div><br /><br />
+                  <div class="quality">
+                      <i class="fa-solid fa-hand-holding-heart bestof"></i>
+                      <i class="fa-solid fa-circle-check larger"></i>
+                      <i class="fa-duotone fa-solid fa-bag-shopping larger"></i>
+                  </div>
+                  <div class="quality">
+                      <h3>100% HANDPICKED</h3>
+                      <h3>ASSURED QUALITY</h3>
+                      <h3>EASY EXCHANGE</h3>
+                  </div>
+
+                  <footer class="foot">
+                      <div class="ifr2">
+                          <a href="Aboutus.html">About Us</a>
+                          <a href="returnpolicy.html">Exchange</a>
+                          <a href="#">Adventure</a>
+                          <a href="supplyers.html">Suppliers</a>
+                          <a href="termandcondition.html">Terms and Conditions</a>
+
+                      </div>
+                      <div class="ifr2">
+                          <a href="AllFormal.html">Men</a>
+                          <a href="../html/Allkurti.html">Women</a>
+                          <a href="../html/Alltshirt.html">Mens-Tshirt</a>
+                          <a href="../html/Allkids.html">Kids</a>
+                          <a href="../html/Allsaree.html">Sarees</a>
+                      </div>
+                      <div class="ifr2">
+                          <a href="#">Finance</a>
+                          <a href="Contactus.html">Contact Us</a>
+                          <a href="#">Payments</a>
+                          <a href="#">Collection</a>
+                          <a href="#">Customer Care</a>
+                      </div>
+                      <div class="social">
+                          <h2>Follow Us On</h2>
+                          <div class="ul">
+                              <ul>
+                                  <li><a href="https://www.linkedin.com/in/vaishnavi-rokade-857157284" target="_blank"><img src="../image/facebook.png" width="60" /></a></li>
+                                  <li><a href="https://wa.link/hsfrjh" target="_blank"><img src="../image/social.png" width="60" /></a></li>
+                                  <li><a href="https://www.facebook.com/profile.php?id=61562853887052&mibextid=ZbWKwL" target="_blank"><img src="../image/insta.png" width="60" /></a></li>
+                              </ul>
+                          </div>
+                      </div><br /><br />
+
+                      <div class="addre">
+                          <h2>Address</h2>
+                          Flat-12,Trendify,<br />Near Abhinav Education Society <br />
+                          Wadawadi Satara
+                          <h2>Location Of Trendify</h2><br /><br />
+                      </div>
+                      <div class="loca">
+                          <iframe class="ifr1" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d485490.51656733995!2d73.58733593479145!3d18.076430644545628!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2f4fe651973ab%3A0xf4eca6f2653b9f2a!2sAbhinav%20Education%20Society%20College%20of%20Engineering%20(Polytechnic)!5e0!3m2!1sen!2sin!4v1728796670727!5m2!1sen!2sin"
+                                  style="border:0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                      </div>
+                      <div class="copy">
+                          <b>Copyright &#169 Trendify.| All Rights Reserved</b>
+                      </div>
+                  </footer>
+              </div>
+    </div>
+</body>
+</html>

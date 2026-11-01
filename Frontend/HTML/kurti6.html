@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slideshow</title>
+    <link href="../css/product.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="slideshow-container">
+        <img class="slide" src="../image/kurtisrushti/kurti6.jpg" height="400" alt="Image 1">
+        <img class="slide" src="../image/kurtisrushti/kurtiback6.jpg" height="400" alt="Image 2">
+        <img class="slide" src="../image/kurtisrushti/kurtiside6.jpg" heigh="400" alt="Image 3">
+        <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+        <button class="next" onclick="changeSlide(1)">&#10095;</button>
+    </div><hr class="bold-line" />
+    <p class="proname"><b>Cotton Designed Kurti</b></p>
+    <div class="headline">
+        <b>PRIZE:</b>
+    </div>
+    <div class="prize">
+        <p>- Rs<del>400/-</del></p>
+    </div>
+    <div class="pr2">
+        <b>- 25% off</b>
+    </div>
+    <div class="pr1">
+        <b>- Only in Rs 300/-</b>
+    </div><br />
+    <div class="headline">
+        <b>SIZE:</b>
+    </div><br />
+    <div class="choose">
+        <select>
+            <option>Size</option>
+            <option>M</option>
+            <option>XL</option>
+            <option>XXL</option>
+            <option>XXXL</option>
+        </select>
+    </div><br /><br />
+    <div class="headline"><b>RATING:</b></div>
+    <div class="rate">
+        <h1>&#9733;</h1>
+        <h1>&#9733;</h1>
+        <h1>&#9733;</h1>
+        <h1>&#9733;</h1>
+        <h1>&#9733;</h1>
+    </div>
+    <div class="btnadd">
+        <button type="button" class="sub1" id="addCartKurti6">Add To Cart</button>
+        <button type="button" class="sub1" onclick="goToCart()">Go To Cart</button>
+    </div>
+    <script src="../js/kurti.js"></script>
+    <script>
+        document.getElementById('addCartKurti6').addEventListener('click', function () {
+            const productName = "Cotton Designed Kurti"; // Update as necessary
+            const price = 300; // Price after discount
+            const image = "../image/kurtisrushti/kurti6.jpg"; // Default image (you can change based on selection)
+            const sizeDropdown = document.querySelector('.choose select');
+            const size = sizeDropdown.value;
+
+            if (size === "Size") {
+                alert("Please select a size before adding to the cart.");
+                return;
+            }
+
+            // Add product to cart
+            addToCart(productName, price, image, size);
+
+            // Show success message
+            alert(`${productName} added to cart successfully!`);
+        });
+
+        // Function to add items to cart
+        function addToCart(productName, price, image, size) {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const existingProductIndex = cart.findIndex(item => item.name === productName && item.size === size);
+
+            if (existingProductIndex > -1) {
+                cart[existingProductIndex].quantity += 1;
+            } else {
+                cart.push({ name: productName, price: price, image: image, size: size, quantity: 1 });
+            }
+
+            localStorage.setItem('cart', JSON.stringify(cart));
+        }
+
+        function goToCart() {
+            window.location.href = "Addcart.html";
+
+        }
+    </script>
+</body>
+</html>

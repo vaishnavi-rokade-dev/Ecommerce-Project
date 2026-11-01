@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link href="../css/Registration.css" rel="stylesheet" />
+</head>
+<body>
+
+    <div class="registration-form" id="registrationForm">
+        <center><h2>Registration</h2></center>
+
+        <div class="form-field">
+            <label for="name">Name <span class="mandatory">*</span></label>
+            <input type="text" id="name" maxlength="26" required oninput="validateName()">
+            <div id="nameError" class="error-message">Only alphabets are allowed.</div>
+        </div>
+        <div class="front">
+            <div class="form-field">
+                <label for="mobile">Mobile Number <span class="mandatory">*</span></label>
+                <input type="tel" id="mobile" maxlength="10" required oninput="validateMobile()">
+                <div id="mobileError" class="error-message">Only 10 digits are allowed, and they must be numbers.</div>
+            </div>
+            <div class="form-field">
+                <label for="password">Password<span class="mandatory">*</span></label>
+                <input type="text" id="password" maxlength="10" required oninput="validatePassword()">
+            </div>
+        </div>
+       
+        <div class="front">
+            <div class="form-field">
+                <label for="email">Email</label>
+                <input type="email" id="email">
+            </div>
+            <div class="form-field">
+                <label>Gender</label>
+                <div class="gender-container">
+                    <label><input type="radio" name="gender" value="male" required> Male</label>
+                    <label><input type="radio" name="gender" value="female" required> Female</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-field">
+            <label for="country" required>Country<span class="mandatory">*</span></label>
+            <select id="country">
+                <option value="india">India</option>
+                <option value="uk">UK</option>
+                <option value="palestine">Palestine</option>
+                <option value="russia">Russia</option>
+                <option value="africa">Africa</option>
+                <option value="france">France</option>
+                <option value="italy">Italy</option>
+                <option value="sri_lanka">Sri Lanka</option>
+                <option value="greece">Greece</option>
+            </select>
+        </div>
+        <div class="front">
+            <div class="form-field">
+                <label for="district">District<span class="mandatory">*</span></label>
+                <input type="text" id="district" required>
+            </div>
+        </div>
+        <div class="front">
+            <div class="form-field">
+                <label for="taluka" required>Taluka<span class="mandatory">*</span></label>
+                <input type="text" id="taluka">
+            </div>
+            <div class="form-field">
+                <label for="city" required>City <span class="mandatory">*</span></label>
+                <input type="text" id="city" required>
+            </div>
+        </div>
+        <div class="front">
+            <div class="form-field">
+                <label for="street">Street <span class="mandatory">*</span></label>
+                <input type="text" id="street" required>
+            </div>
+            <div class="form-field">
+                <label>Zip/Pin <span class="mandatory">*</span></label>
+                <div>
+                    <input type="text" id="zip" placeholder="Zip" required>
+                </div>
+            </div>
+        </div>
+        <div class="buttons">
+            <div class="front">
+                <button type="button" onclick="submitForm()">Register</button>
+                <button type="button" onclick="alreadyRegister()">Already Registered? Login</button>
+                <button type="button" onclick="Contactus()">Contact Us</button>
+            </div>
+        </div>
+    </div>
+    <script src="../js/Rgistration.js"></script>
+</body>
+</html>

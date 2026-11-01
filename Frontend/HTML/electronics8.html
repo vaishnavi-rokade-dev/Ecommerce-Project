@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slideshow</title>
+    <link href="../css/product.css" rel="stylesheet" />
+    <script src="../js/Allproduct.js"></script>
+</head>
+<body>
+    <nav>
+        <div class="navsection">
+            <div class="logo"><img src="../image/Screenshot (234).png" width="300" height="50" /></div>
+            <div class="headsection">
+                <div class="pro">
+                    <select id="pageDropdown" onchange="navigateToPage()">
+                        <option>product category</option>
+                        <option value="Alltshirt.html">T-shirt</option>
+                        <option value="Allkurti.html">Womens-Kurti</option>
+                        <option value="AllFormal.html">Formal Shirt</option>
+                        <option value="Allelectronics.html">Electronics</option>
+                        <option value="Allsaree.html">Saree</option>
+                        <option value="Allkids.html">Kids</option>
+                        <option value="Allhomeproduct.html">Home Product</option>
+                    </select>
+                </div>
+                <button type="button" onclick="Home()">Home</button>
+                <button type="button" onclick="AddCart()">Cart</button>
+
+                <div><button type="button" onclick="About()">About</button></div>
+
+                <button type="button" onclick="LoginMain()">Login</button>
+
+                <div id="accountSection">
+                    <a href="#">
+                        <div class="account-container">
+                            <i class="fas fa-user-circle"></i>
+                            <div id="welcomeMessage" style="font-size: 20px; color: #004d40"></div>
+                        </div>
+                    </a>
+                </div>
+                <button type="button" onclick="logout()">Logout</button>
+            </div>
+        </div>
+    </nav><br /><br /><br /><br /><br /><br />
+    <div class="slideshow-container">
+        <img class="slide" src="../image/electronics/electronics8.jpg" height="400" alt="Image 1">
+        <img class="slide" src="../image/electronics/electronicsleft8.jpg" height="400" alt="Image 2">
+        <img class="slide" src="../image/electronics/electronicsright8.jpg" height="400" alt="Image 2">
+        <img class="slide" src="../image/electronics/electronicsside8.jpg" height="400" alt="Image 2">
+        <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+        <button class="next" onclick="changeSlide(1)">&#10095;</button>
+    </div><hr class="bold-line" />
+    <p class="proname"><b>Pain relief</b></p>
+    <div class="headline">
+        <b>PRIZE:</b>
+    </div>
+    <div class="prize">
+        <p>- Rs<del>400/-</del></p>
+    </div>
+    <div class="pr2">
+        <b>- 25% off</b>
+    </div>
+    <div class="pr1">
+        <b>- Only in Rs 150/-</b>
+    </div>
+    <br /><br />
+    <div class="headline"><b>RATING:</b></div>
+    <div class="rate">
+        <h1>&#9733;</h1>
+        <h1>&#9733;</h1>
+        <h1>&#9733;</h1>
+        <h1>&#9733;</h1>
+        <h1>&#9733;</h1>
+    </div>
+    <div class="btnadd">
+        <button type="button" class="sub1">Add To Cart</button>
+        <button type="button" class="sub1">Add To Wishlist</button>
+    </div>
+    <script src="../js/kurti.js"></script>
+</body>
+</html>

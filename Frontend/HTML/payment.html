@@ -1,0 +1,110 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../css/payment.css" rel="stylesheet" />
+    <script src="../js/payment.js" defer></script>
+</head>
+<body>
+
+    <div class="container">
+
+        <form id="payment-form" action="">
+
+            <div class="row">
+
+                <div class="col">
+
+                    <h3 class="title">Billing Address</h3>
+
+                    <div class="inputBox">
+                        <span>Full Name :</span>
+                        <input type="text" id="full-name" placeholder="Enter your name">
+                        <span class="error" id="name-error"></span>
+                    </div>
+
+                    <!-- Replace Email input with Phone Number input -->
+                    <div class="inputBox">
+                        <span>Phone Number :</span>
+                        <input type="text" id="phone-number" placeholder="123-456-7890">
+                        <span class="error" id="phone-error"></span>
+                    </div>
+
+                    <div class="inputBox">
+                        <span>Address :</span>
+                        <input type="text" id="address" placeholder="Room - Street - Locality">
+                        <span class="error" id="address-error"></span>
+                    </div>
+
+                    <div class="inputBox">
+                        <span>City :</span>
+                        <input type="text" id="city" placeholder="Mumbai">
+                        <span class="error" id="city-error"></span>
+                    </div>
+
+                    <div class="flex">
+                        <div class="inputBox">
+                            <span>State :</span>
+                            <input type="text" id="state" placeholder="India">
+                            <span class="error" id="state-error"></span>
+                        </div>
+                        <div class="inputBox">
+                            <span>Zip Code :</span>
+                            <input type="text" id="zip-code" placeholder="123 456">
+                            <span class="error" id="zip-error"></span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col">
+
+                    <h3 class="title">Payment</h3>
+
+                    <div class="inputBox">
+                        <span>Cards Accepted :</span>
+                        <img src="../image/card_img.png" alt="cards">
+                    </div>
+                    <div class="inputBox">
+                        <span>Name on Card :</span>
+                        <input type="text" id="card-name" placeholder="Mr. ABC PQR">
+                        <span class="error" id="card-name-error"></span>
+                    </div>
+                    <div class="inputBox">
+                        <span>Credit Card Number :</span>
+                        <input type="text" id="card-number" placeholder="1111-2222-3333-4444">
+                        <span class="error" id="card-number-error"></span>
+                    </div>
+                    <div class="inputBox">
+                        <span>Exp Month :</span>
+                        <input type="text" id="exp-month" placeholder="January">
+                        <span class="error" id="exp-month-error"></span>
+                    </div>
+
+                    <div class="flex">
+                        <div class="inputBox">
+                            <span>Exp Year :</span>
+                            <input type="text" id="exp-year" placeholder="2027">
+                            <span class="error" id="exp-year-error"></span>
+                        </div>
+                        <div class="inputBox">
+                            <span>CVV :</span>
+                            <input type="text" id="cvv" placeholder="1234">
+                            <span class="error" id="cvv-error"></span>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <input type="submit" value="Proceed to Checkout" class="submit-btn">
+
+        </form>
+
+    </div>
+
+</body>
+</html>
